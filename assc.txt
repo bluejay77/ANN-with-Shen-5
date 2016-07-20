@@ -1,0 +1,112 @@
+
+antti@antti-HP-Compaq-dc7100-SFF-PE271ET ~/ShenANN $ ./Shen
+
+Shen, copyright (C) 2010-2015 Mark Tarver
+www.shenlanguage.org, Shen 19.2
+running under Common Lisp, implementation: CLisp
+port 1.9 ported by Mark Tarver
+
+
+(0-) (load "defstruct.shen")
+defstruct.type#struct-type
+defstruct.char-upcase
+defstruct.string-capitalize
+defstruct.sym-capitalize
+defstruct.slot-type
+defstruct.slots-types
+defstruct.slots-defs
+defstruct.datatypes
+defstruct.accessors
+defstruct.setters
+defstruct.constructor-type
+defstruct.constr-init
+defstruct.constructor
+defstruct.struct-aux
+defstruct-macro
+
+run time: 1.1160000525414944 secs
+loaded
+
+(1-) (load "for.shen")
+for-expand
+for-macro-fn
+for-macro
+
+run time: 0.09999990463256836 secs
+loaded
+
+(2-) (load "array.shen")
+outer-product
+scalar-mult
+output-array
+array-sum
+transpose
+output-array-v
+
+run time: 0.3479999303817749 secs
+loaded
+
+(3-) (load "assc.shen")
+<(@p <1 -1 -1 -1> <-1 1 1>) (@p <-1 -1 -1 1> <1 -1 1>)>
+type#assc
+mk-assc
+assc-neuron-output->
+assc-treshold-function->
+assc-activation-level->
+assc-weights-vec->
+assc-inputs-vec->
+assc-nr-inputs->
+assc-neuron-output
+assc-treshold-function
+assc-activation-level
+assc-weights-vec
+assc-inputs-vec
+assc-nr-inputs
+transfer-function
+activation-level
+activation-level-h
+treshold
+<<-1 1 1 1> <1 -1 -1 -1> <1 -1 -1 -1>>
+<<-1 -1 -1 1> <1 1 1 -1> <-1 -1 -1 1>>
+<<-2 0 0 2> <2 0 0 -2> <0 -2 -2 0>>
+
+<<-2 0 0 2>
+ <2 0 0 -2>
+ <0 -2 -2 0>
+>
+[]
+<<4 <... ... ... ...> <-2 0 0 2> 0 #<FUNCTION LAMBDA (V1681) (treshold V1681)> 0> <4 <... ... ... ...> <2 0 0 -2> 0 #<FUNCTION LAMBDA (V1681) (treshold V1681)> 0> <4 <... ... ... ...> <0 -2 -2 0> 0 #<FUNCTION LAMBDA (V1681) (treshold V1681)> 0>>
+test-assc
+list2vec
+list2vec-h
+
+run time: 2.064000129699707 secs
+loaded
+
+(4-) (test-assc)
+
+Give a sequence of 4 Hamming integers: 1 -1 -1 -1
+
+Numbers: [1 -1 -1 -1]
+
+Vector: <1 -1 -1 -1>
+
+
+Output of ANN: [-1 1 1]
+[]
+
+(5-) (test-assc)
+
+Give a sequence of 4 Hamming integers: -1 -1 -1 1
+
+Numbers: [-1 -1 -1 1]
+
+Vector: <-1 -1 -1 1>
+
+
+Output of ANN: [1 -1 1]
+[]
+
+(6-) (QUIT)
+antti@antti-HP-Compaq-dc7100-SFF-PE271ET ~/ShenANN $
+
